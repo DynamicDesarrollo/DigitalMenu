@@ -1,19 +1,15 @@
 /* src/features/categories/Categories.css */
 
-/* Contenedor principal para centrar todo */
 .categories-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
   padding-top: 80px; /* Espacio superior para evitar superposición con el Navbar */
-  height: 100vh;
-  text-align: center;
-  box-sizing: border-box; /* Asegura que el padding se incluye en el ancho total */
+  min-height: 100vh; /* Asegurar que las categorías ocupen toda la altura de la pantalla */
 }
 
-/* Contenedor de la cuadrícula de categorías */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -25,14 +21,17 @@
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
+  .categories-container {
+    padding-top: 60px; /* Reducir el espacio superior en dispositivos móviles */
+  }
+
   .categories-grid {
     grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
   }
 }
 
-/* Estilos para las tarjetas de categoría */
 .card {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -42,12 +41,12 @@
 }
 
 .card h2 {
-  font-weight: bold; /* Texto en negrita */
-  font-size: 1.5rem; /* Tamaño de fuente más grande */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra al texto */
-  background: linear-gradient(45deg, orange, red); /* Gradiente de color */
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, orange, red);
   -webkit-background-clip: text;
-  color: transparent; /* Color transparente para mostrar el gradiente */
+  color: transparent;
 }
 
 .card:hover {
