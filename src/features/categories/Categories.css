@@ -54,3 +54,57 @@ nav a {
   text-decoration: none;
   font-size: 1.2em;
 }
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+}
+/* src/features/categories/Categories.css */
+
+/* Contenedor principal para centrar todo */
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Contenedor de la cuadrícula de categorías */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+  }
+}
+
+/* Estilos para las tarjetas de categoría */
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco con 80% de opacidad */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
