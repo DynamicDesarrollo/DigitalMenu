@@ -1,65 +1,4 @@
 /* src/features/categories/Categories.css */
-.categories-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* Centrar verticalmente */
-  padding: 20px;
-  height: 100vh; /* Asegúrate de que el contenedor ocupe toda la altura de la ventana */
-  text-align: center; /* Centrar texto */
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  justify-content: center; /* Centrar horizontalmente los elementos dentro de la cuadrícula */
-}
-
-.card {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Fondo blanco con 80% de opacidad */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  transition: transform 0.2s;
-  text-align: center; /* Centrar texto */
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-nav {
-  position: absolute; /* Posicionar el nav en la parte superior */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  color: white;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-  grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
-}
-/* src/features/categories/Categories.css */
 
 /* Contenedor principal para centrar todo */
 .categories-container {
@@ -95,14 +34,19 @@ nav a {
     255,
     255,
     255,
-    0.8
-  ); /* Fondo blanco con 80% de opacidad */
+    0.6
+  ); /* Fondo blanco con 60% de opacidad */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px;
   transition: transform 0.2s;
   text-align: center;
+}
+
+.card h2 {
+  color: white; /* Texto en blanco */
+  font-weight: bold; /* Texto en negrita */
 }
 
 .card:hover {
