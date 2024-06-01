@@ -10,6 +10,13 @@
   padding: 10px 20px;
   z-index: 1000; /* Asegúrate de que el Navbar esté en la parte superior */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espacio entre los elementos del navbar */
   align-items: center;
+  box-sizing: border-box; /* Asegura que el padding se incluye en el ancho total */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
 }
