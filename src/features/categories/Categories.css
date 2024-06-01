@@ -30,12 +30,7 @@
 
 /* Estilos para las tarjetas de categoría */
 .card {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.6
-  ); /* Fondo blanco con 60% de opacidad */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -47,6 +42,8 @@
 .card h2 {
   color: white; /* Texto en blanco */
   font-weight: bold; /* Texto en negrita */
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra al texto */
 }
 
 .card:hover {
