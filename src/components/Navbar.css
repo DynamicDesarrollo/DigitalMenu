@@ -1,18 +1,15 @@
 /* src/components/Navbar.css */
-nav {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: transparent; /* Cambiar el fondo a transparente */
-  color: white;
-}
 
-nav a {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
   color: white;
-  text-decoration: none;
-  font-size: 1.2em;
+  padding: 10px 20px;
+  z-index: 1000; /* Asegúrate de que el Navbar esté en la parte superior */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

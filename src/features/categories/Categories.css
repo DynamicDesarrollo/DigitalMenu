@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  padding-top: 60px; /* Espacio superior para evitar superposición con el Navbar */
   height: 100vh;
   text-align: center;
 }
@@ -40,10 +41,12 @@
 }
 
 .card h2 {
-  color: white; /* Texto en blanco */
   font-weight: bold; /* Texto en negrita */
   font-size: 1.5rem; /* Tamaño de fuente más grande */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+  background: linear-gradient(45deg, orange, red); /* Gradiente de color */
+  -webkit-background-clip: text;
+  color: transparent; /* Color transparente para mostrar el gradiente */
 }
 
 .card:hover {
