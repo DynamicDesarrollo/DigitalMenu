@@ -1,15 +1,13 @@
-/* src/components/Navbar.css */
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 10px 20px;
-  z-index: 1000; /* Asegúrate de que el Navbar esté en la parte superior */
-  box-sizing: border-box; /* Asegura que el padding se incluye en el ancho total */
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .navbar-container {
@@ -47,11 +45,4 @@
 .menu-dropdown ul li a {
   color: white;
   text-decoration: none;
-}
-
-/* Media Query para dispositivos móviles */
-@media screen and (min-width: 768px) {
-  .menu-dropdown {
-    display: none; /* Ocultar el menú desplegable en pantallas más grandes */
-  }
 }

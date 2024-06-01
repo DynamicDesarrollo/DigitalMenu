@@ -1,10 +1,8 @@
-// src/components/Navbar.jsx
-
 import { useState } from 'react';
+import PropTypes from 'prop-types'; // Importa PropTypes
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Asegúrate de que el archivo CSS del Navbar esté importado
+import './Navbar.css';
 
-// eslint-disable-next-line react/prop-types
 const Navbar = ({ categories }) => {
     const [showMenu, setShowMenu] = useState(false);
 
@@ -35,6 +33,14 @@ const Navbar = ({ categories }) => {
     );
 };
 
+
+Navbar.propTypes = {
+    categories: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
+
 export default Navbar;
-
-
