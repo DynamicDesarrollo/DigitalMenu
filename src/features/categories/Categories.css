@@ -12,16 +12,16 @@
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(150px, 1fr)
-  ); /* Mostrar dos tarjetas por fila y ajustar automáticamente según el ancho de la pantalla */
-  gap: 20px; /* Espacio entre tarjetas */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-height: calc(
+    100vh - 60px
+  ); /* Establecer una altura máxima para el contenedor de tarjetas */
+  overflow-y: auto; /* Habilitar el desplazamiento vertical */
 }
 
 .category-card {
-  height: auto; /* Altura automática para adaptarse al contenido */
-  max-height: 200px; /* Altura máxima para evitar que las tarjetas sean muy altas */
+  height: 100px; /* Establecer una altura más pequeña para las tarjetas */
 }
 
 @media screen and (min-width: 768px) {
