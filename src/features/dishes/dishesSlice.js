@@ -20,7 +20,15 @@ const initialState = {
             {
                 id: 1, name: 'Hamburguesa Barril', description: 'carne artesanal, pan de orégano, queso mozzarella, queso costeño, lechuga crespa,cebolla caramelizada en vino tinto, tomate, tocineta, papa a la francesa y salsa de la casa', price: '20.000'
             },
-            { id: 6, name: 'Helado', description: 'Helado artesanal de varios sabores', price: 4 },
+            {
+                id: 2, name: 'Hamburguesa sencilla', description: 'carne artesanal, pan de orégano, queso mozzarella, lechuga crespa, cebollaencurtida, tomate, papa a la francesa y salsa de la casa', price: '15.000'
+            },
+            {
+                id: 3, name: 'Hamburguesa de chicharrón', description: 'chicharrón, pan de orégano, queso mozzarella, lechuga crespa, cebolla caramelizada en vino tinto, tomate, papa a la francesa y salsa de la casa', price: '20.000'
+            },
+            {
+                id: 4, name: 'Hamburguesa de bondiola de cerdo', description: 'bondiola de cerdo, pan de orégano, queso mozzarella, queso costeño, lechuga crespa, cebolla caramelizada en vino tinto, tomate, papa a la francesa y salsa de la casa', price: '20.000'
+            },
         ],
 
     },
