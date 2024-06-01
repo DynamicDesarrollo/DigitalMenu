@@ -14,7 +14,44 @@
 
 .navbar-container {
   display: flex;
-  justify-content: flex-start; /* Alinear elementos a la izquierda */
+  justify-content: space-between;
   align-items: center;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-dropdown ul li {
+  padding: 10px 20px;
+}
+
+.menu-dropdown ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (min-width: 768px) {
+  .menu-dropdown {
+    display: none; /* Ocultar el menú desplegable en pantallas más grandes */
+  }
 }
