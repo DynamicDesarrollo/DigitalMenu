@@ -12,7 +12,8 @@ const Categories = () => {
 
     return (
         <div className="categories-container">
-            <h1>Categorías</h1>
+            <h1>Barril Gourmet</h1>
+
             <div className="categories-grid">
                 {categories.map((category) => (
                     <div key={category.id} className="card">
