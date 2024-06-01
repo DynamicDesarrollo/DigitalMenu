@@ -72,7 +72,7 @@ nav a {
 .dishes li {
   margin: 10px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(10, 10, 10, 0.8);
   border-radius: 8px;
   flex: 1 1 calc(33.333% - 20px);
   box-sizing: border-box;
