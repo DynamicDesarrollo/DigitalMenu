@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 20px;
   padding-top: 80px; /* Espacio superior para evitar superposición con el Navbar */
   min-height: 100vh; /* Asegurar que las categorías ocupen toda la altura de la pantalla */

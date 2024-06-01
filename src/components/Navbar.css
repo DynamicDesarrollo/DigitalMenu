@@ -10,7 +10,7 @@
   padding: 10px 20px;
   z-index: 1000; /* Asegúrate de que el Navbar esté en la parte superior */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Alinear elementos a la izquierda */
   align-items: center;
   box-sizing: border-box; /* Asegura que el padding se incluye en el ancho total */
 }
