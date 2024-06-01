@@ -1,0 +1,27 @@
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-height: calc(
+    100vh - 60px
+  ); /* Establecer una altura máxima para el contenedor de tarjetas */
+  overflow-y: auto; /* Habilitar el desplazamiento vertical */
+}
+
+.dish-card {
+  background-color: white; /* Fondo blanco para las tarjetas */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+}
+
+.dish-card h2 {
+  font-size: 1.2rem; /* Tamaño de letra */
+  font-weight: bold; /* Texto en negrita */
+  color: #333; /* Color de texto */
+}
+
+.dish-card p {
+  font-size: 1rem; /* Tamaño de letra */
+  color: #666; /* Color de texto */
+}

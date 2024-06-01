@@ -27,7 +27,7 @@
 @media screen and (min-width: 768px) {
   .categories-grid {
     grid-template-columns: repeat(
-      2,
+      1,
       2fr
     ); /* Mostrar dos tarjetas por fila en pantallas más grandes */
   }
