@@ -2,9 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     categories: [
-        { id: 1, name: 'Entrantes' },
-        { id: 2, name: 'Platos Principales' },
-        { id: 3, name: 'Postres' },
+        { id: 1, name: 'Cotrtes de Cerdo' },
+        { id: 2, name: 'Cortes de Res' },
+        { id: 3, name: 'Hamburguesas' },
+        { id: 4, name: 'Choriperro' },
+        { id: 5, name: 'Picadas' },
+        { id: 6, name: 'Tacos' },
+        { id: 7, name: 'Hamburguesas' },
+        { id: 8, name: 'Menú Infantil' },
     ],
 };
 
