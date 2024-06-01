@@ -12,21 +12,16 @@
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  justify-content: center;
+  grid-template-columns: 1fr; /* Por defecto, mostrar una tarjeta por fila */
+  gap: 20px; /* Espacio entre tarjetas */
 }
 
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
-  .categories-container {
-    padding-top: 60px; /* Reducir el espacio superior en dispositivos móviles */
-  }
-
+@media screen and (min-width: 768px) {
   .categories-grid {
-    grid-template-columns: 1fr; /* Una columna en dispositivos móviles */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Mostrar dos tarjetas por fila en dispositivos móviles */
   }
 }
 
