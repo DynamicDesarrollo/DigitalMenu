@@ -30,7 +30,36 @@ const initialState = {
                 id: 4, name: 'Hamburguesa de bondiola de cerdo', description: 'bondiola de cerdo, pan de orégano, queso mozzarella, queso costeño, lechuga crespa, cebolla caramelizada en vino tinto, tomate, papa a la francesa y salsa de la casa', price: '20.000'
             },
         ],
+        4: [
+            {
+                id: 1, name: 'Choriperro', description: 'chorizo de cerdo artesanal, pan de orégano, cebolla encurtida, queso costeño y salsa de la casa', price: '10.000'
+            },
+            {
+                id: 2, name: 'Choriperro gourmet', description: 'chorizo de cerdo artesanal, pan de orégano, cebolla caramelizada en vino tinto, queso costeño, queso mozzarella, tocineta y salsa de la casa', price: '15.000'
+            },
+        ],
+        5: [
+            {
+                id: 1, name: 'Picada para 4 personas', description: 'chorizo artesanal, butifarra artesanal, bondiola de cerdo, chicharrón, costilla de cerdo, bastones de yuca y papa francesa', price: '60.000'
+            },
+            {
+                id: 2, name: 'Picada para 6 personas', description: 'chorizo artesanal, butifarra artesanal, bondiola de cerdo, chicharrón, costilla de cerdo, bastones de yuca y papa francesa', price: '80.000'
+            },
+            {
+                id: 2, name: 'Picada para 8 personas', description: 'chorizo artesanal, butifarra artesanal, bondiola de cerdo, chicharrón, costilla de cerdo, bastones de yuca y papa francesa', price: '100.000'
+            },
+        ],
+        6: [
+            {
+                id: 1, name: 'Tacos x 3', description: 'tortilla, chicharrón, bondiola, piña asada, cebolla caramelizada, cebolla encurtida, limón y salsas de la casa', price: '15.000'
+            },
+        ],
+        7: [
+            {
+                id: 1, name: 'Mini Hamburguesa', description: 'carne artesanal, pan de orégano, tocineta, queso mozzarella, hit en cajita, papas francesa, salsa de la casa y sorpresa', price: '15.000'
+            },
 
+        ],
     },
 };
 
