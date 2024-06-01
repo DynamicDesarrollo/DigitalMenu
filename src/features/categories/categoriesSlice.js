@@ -10,6 +10,12 @@ const initialState = {
         { id: 6, name: 'Tacos' },
         { id: 7, name: 'Hamburguesas' },
         { id: 8, name: 'Menú Infantil' },
+        { id: 9, name: 'Sodas Artesanales' },
+        { id: 10, name: 'Sodas Saborizadas' },
+        { id: 11, name: 'Limonadas' },
+        { id: 12, name: 'Vinos' },
+        { id: 13, name: 'Gaseosas' },
+        { id: 14, name: 'Cervezas' },
     ],
 };
 
