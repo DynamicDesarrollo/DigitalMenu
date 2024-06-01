@@ -50,7 +50,7 @@ nav a {
 /* Categorías y Platos */
 .categories,
 .dishes {
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@ nav a {
 .categories li,
 .dishes li {
   margin: 10px;
-  padding: 15px;
+  padding: 20px;
   background-color: rgba(10, 10, 10, 0.8);
   border-radius: 8px;
   flex: 1 1 calc(33.333% - 20px);
@@ -150,7 +150,29 @@ body {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(150px, 1fr)
-  ); /* Mostrar el número deseado de platos por fila */
-  gap: 20px; /* Espacio entre tarjetas de platos */
+    minmax(200px, 1fr)
+  ); /* Ancho mínimo y máximo de las tarjetas */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.dish-card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco con opacidad del 80% */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+  margin-bottom: 20px; /* Separación adicional entre las tarjetas */
+}
+
+.dish-card h2 {
+  font-weight: bold; /* Texto en negrita */
+  color: #000; /* Color del texto negro */
+}
+.dish-card p {
+  font-weight: bold; /* Texto en negrita */
+  color: #000; /* Color del texto negro */
 }
