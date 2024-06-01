@@ -10,6 +10,7 @@
   padding-top: 80px; /* Espacio superior para evitar superposición con el Navbar */
   height: 100vh;
   text-align: center;
+  box-sizing: border-box; /* Asegura que el padding se incluye en el ancho total */
 }
 
 /* Contenedor de la cuadrícula de categorías */
