@@ -9,17 +9,19 @@ const Dishes = () => {
     const dishes = useSelector((state) => selectDishesByCategory(state, parseInt(categoryId)));
 
     return (
-        <div className="dishes">
-            <h1>Platos</h1>
-            <ul>
-                {dishes.map((dish) => (
-                    <li key={dish.id}>
-                        <h2>{dish.name}</h2>
-                        <p>{dish.description}</p>
-                        <p>Precio: ${dish.price}</p>
-                    </li>
-                ))}
-            </ul>
+        <div className="dishes-container">
+            <div className="dishes-grid">
+                <h1>Platos</h1>
+                <ul>
+                    {dishes.map((dish) => (
+                        <li key={dish.id}>
+                            <h2>{dish.name}</h2>
+                            <p>{dish.description}</p>
+                            <p>Precio: ${dish.price}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };

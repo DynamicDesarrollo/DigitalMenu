@@ -17,7 +17,9 @@ const initialState = {
             { id: 3, name: 'Res a la plancha', description: 'papa vapor, papa criolla, yuca frita o papa francesa, ensalada y salsas de la cada', price: '18.000' },
         ],
         3: [
-            { id: 5, name: 'Tiramisú', description: 'Postre italiano con café y mascarpone', price: 6 },
+            {
+                id: 1, name: 'Hamburguesa Barril', description: 'carne artesanal, pan de orégano, queso mozzarella, queso costeño, lechuga crespa,cebolla caramelizada en vino tinto, tomate, tocineta, papa a la francesa y salsa de la casa', price: '20.000'
+            },
             { id: 6, name: 'Helado', description: 'Helado artesanal de varios sabores', price: 4 },
         ],
 
