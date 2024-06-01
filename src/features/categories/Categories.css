@@ -12,16 +12,24 @@
 
 .categories-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Por defecto, mostrar una tarjeta por fila */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Mostrar dos tarjetas por fila y ajustar automáticamente según el ancho de la pantalla */
   gap: 20px; /* Espacio entre tarjetas */
+}
+
+.category-card {
+  height: auto; /* Altura automática para adaptarse al contenido */
+  max-height: 200px; /* Altura máxima para evitar que las tarjetas sean muy altas */
 }
 
 @media screen and (min-width: 768px) {
   .categories-grid {
     grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Mostrar dos tarjetas por fila en dispositivos móviles */
+      1,
+      2fr
+    ); /* Mostrar dos tarjetas por fila en pantallas más grandes */
   }
 }
 
