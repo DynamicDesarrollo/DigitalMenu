@@ -1,0 +1,18 @@
+/* src/components/Navbar.css */
+nav {
+  position: absolute; /* Posicionar el nav en la parte superior */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
