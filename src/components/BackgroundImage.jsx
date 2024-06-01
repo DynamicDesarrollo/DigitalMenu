@@ -7,7 +7,7 @@ const BackgroundImage = ({ children }) => {
     return (
         <div
             style={{
-                backgroundImage: `url(/background.jpeg)`, // Usar URL relativa
+                backgroundImage: `url(assets/background.jpeg)`, // Usar URL relativa
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 height: '100vh',
