@@ -9,7 +9,7 @@ const Dishes = () => {
     const [selectedDishes, setSelectedDishes] = useState([]);
 
     // Número de celular fijo
-    const phoneNumber = '3102102203';
+    const phoneNumber = '573102102203';
 
     const addToOrder = (dish) => {
         setSelectedDishes((prevSelectedDishes) => [...prevSelectedDishes, dish]);
