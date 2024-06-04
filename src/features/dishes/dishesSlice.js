@@ -70,88 +70,77 @@ const initialState = {
             {
                 id: 3, name: 'Frutos rojos', description: 'Bebida Refrescante', price: '12.000'
             },
-        ],
-        9: [
             {
-                id: 1, name: 'Kiwi', description: 'Bebida Refrescante', price: '7.000'
+                id: 4, name: 'Kiwi', description: 'Bebida Refrescante', price: '7.000'
             },
             {
-                id: 2, name: 'Fresa', description: 'Bebida Refrescante', price: '7.000'
+                id: 5, name: 'Fresa', description: 'Bebida Refrescante', price: '7.000'
             },
             {
-                id: 3, name: 'Mandarina', description: 'Bebida Refrescante', price: '7.000'
+                id: 6, name: 'Mandarina', description: 'Bebida Refrescante', price: '7.000'
             },
             {
-                id: 4, name: 'Cereza', description: 'Bebida Refrescante', price: '7.000'
-            }, {
-                id: 5, name: 'La pitufo', description: 'Bebida Refrescante', price: '6.000'
-            },
-        ],
-        10: [
-            {
-                id: 1, name: 'Natural', description: 'Bebida Refrescante', price: '8.000'
+                id: 7, name: 'Cereza', description: 'Bebida Refrescante', price: '7.000'
             },
             {
-                id: 2, name: 'Cereceda', description: 'Bebida Refrescante', price: '9.000'
+                id: 8, name: 'La pitufo', description: 'Bebida Refrescante', price: '6.000'
             },
             {
-                id: 3, name: 'De coco', description: 'Bebida Refrescante', price: '10.000'
-            },
-
-        ],
-        11: [
-            {
-                id: 1, name: 'Copa De Vino', description: 'Bebida Refrescante', price: '10.000'
+                id: 9, name: 'Natural', description: 'Bebida Refrescante', price: '8.000'
             },
             {
-                id: 2, name: 'Tinto de verano', description: 'Bebida Refrescante', price: '12.000'
+                id: 10, name: 'Cereceda', description: 'Bebida Refrescante', price: '9.000'
             },
             {
-                id: 3, name: 'Sangria', description: 'Bebida Refrescante', price: '15.000'
-            },
-
-        ],
-        12: [
-            {
-                id: 1, name: 'Coca-cola lata', description: 'Bebida Refrescante', price: '3.000'
+                id: 11, name: 'De coco', description: 'Bebida Refrescante', price: '10.000'
             },
             {
-                id: 2, name: 'Manzana', description: 'Bebida Refrescante', price: '3.000'
+                id: 12, name: 'Copa De Vino', description: 'Bebida Refrescante', price: '10.000'
             },
             {
-                id: 3, name: 'Colombiana', description: 'Bebida Refrescante', price: '3.000'
+                id: 13, name: 'Tinto de verano', description: 'Bebida Refrescante', price: '12.000'
             },
             {
-                id: 4, name: 'Agua', description: 'Bebida Refrescante', price: '1.000'
+                id: 14, name: 'Sangria', description: 'Bebida Refrescante', price: '15.000'
+            },
+            {
+                id: 15, name: 'Coca-cola lata', description: 'Bebida Refrescante', price: '3.000'
+            },
+            {
+                id: 16, name: 'Manzana', description: 'Bebida Refrescante', price: '3.000'
+            },
+            {
+                id: 17, name: 'Colombiana', description: 'Bebida Refrescante', price: '3.000'
+            },
+            {
+                id: 18, name: 'Agua', description: 'Bebida Refrescante', price: '1.000'
             },
 
             {
-                id: 5, name: 'Agua con gas', description: 'Bebida Refrescante', price: '1.000'
+                id: 19, name: 'Agua con gas', description: 'Bebida Refrescante', price: '1.000'
             },
 
             {
-                id: 6, name: 'Hatsu', description: 'Bebida Refrescante', price: '4.000'
+                id: 20, name: 'Hatsu', description: 'Bebida Refrescante', price: '4.000'
             },
 
             {
-                id: 7, name: 'Bretaña', description: 'Bebida Refrescante', price: '4.000'
+                id: 21, name: 'Bretaña', description: 'Bebida Refrescante', price: '4.000'
             },
             {
-                id: 8, name: 'Ginger', description: 'Bebida Refrescante', price: '4.000'
+                id: 22, name: 'Ginger', description: 'Bebida Refrescante', price: '4.000'
             },
             {
-                id: 9, name: 'Coca-cola ¼', description: 'Bebida Refrescante', price: '8.000'
-            },
-        ],
-        13: [
-            {
-                id: 1, name: 'Corona', description: 'Bebida Refrescante', price: '5.000'
+                id: 23, name: 'Coca-cola ¼', description: 'Bebida Refrescante', price: '8.000'
             },
             {
-                id: 2, name: 'Budweiser', description: 'Bebida Refrescante', price: '4.000'
+                id: 24, name: 'Corona', description: 'Bebida Refrescante', price: '5.000'
             },
             {
-                id: 3, name: 'Club Colombia', description: 'Bebida Refrescante', price: '5.000'
+                id: 25, name: 'Budweiser', description: 'Bebida Refrescante', price: '4.000'
+            },
+            {
+                id: 26, name: 'Club Colombia', description: 'Bebida Refrescante', price: '5.000'
             },
         ],
     },
