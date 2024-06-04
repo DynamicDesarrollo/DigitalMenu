@@ -11,15 +11,15 @@ const Dishes = () => {
     return (
         <div className="dishes-container">
             <div className="dishes-grid">
-                <ul>
+                <div>
                     {dishes.map((dish) => (
-                        <li className="dish-card" key={dish.id}>
+                        <div className="dish-card" key={dish.id}>
                             <h2>{dish.name}</h2>
                             <p>{dish.description}</p>
                             <p>Precio: ${dish.price}</p>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
         </div>
     );
