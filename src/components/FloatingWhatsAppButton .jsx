@@ -23,7 +23,7 @@ const FloatingWhatsAppButton = () => {
         \nTeléfono: ${telefono}
         \nMonto a pagar: $${totalAmount}`;
 
-        const url = `https://api.whatsapp.com/send?phone=3102102203&text=${encodeURIComponent(mensaje)}`;
+        const url = `https://api.whatsapp.com/send?phone=573102102203&text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
     };
 
