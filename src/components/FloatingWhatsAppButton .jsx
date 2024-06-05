@@ -13,6 +13,7 @@ const FloatingWhatsAppButton = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         handleWhatsAppClick();
+        setShowModal(false);
     };
 
     const handleWhatsAppClick = () => {
@@ -26,7 +27,9 @@ const FloatingWhatsAppButton = () => {
         const url = `https://api.whatsapp.com/send?phone=573102102203&text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
     };
-
+    const handleCloseModal = () => {
+        setShowModal(false); // Cierra el modal cuando se hace clic en el botón de cerrar
+    };
     return (
         <>
             <div className="floating-whatsapp-button">
@@ -37,7 +40,7 @@ const FloatingWhatsAppButton = () => {
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
-                        <span className="close" onClick={() => setShowModal(false)}>
+                        <span className="close" onClick={handleCloseModal}>
                             &times;
                         </span>
                         <form onSubmit={handleSubmit}>
@@ -80,7 +83,7 @@ const FloatingWhatsAppButton = () => {
                                 readOnly
                                 required
                             />
-                            <button type="submit" className="send-button">Enviar pedido</button>
+                            <button type="submit" className="send-button">Enviar pedido por WhatsApp</button>
                         </form>
                     </div>
                 </div>

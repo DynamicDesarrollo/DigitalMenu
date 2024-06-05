@@ -264,7 +264,7 @@ body {
 .modal-content form {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espacio entre los elementos del formulario */
+  gap: 5px; /* Espacio entre los elementos del formulario */
 }
 
 .modal-content label {
