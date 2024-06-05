@@ -17,14 +17,14 @@ const FloatingWhatsAppButton = () => {
     };
 
     const handleWhatsAppClick = () => {
-        const mensaje = `Pedido:
+        const mensaje = `Deseo Ordenar lo siguiente :
         ${selectedDishes.map(dish => `\n- ${dish.name} (x${dish.quantity}) - $${Number(dish.price.replace('.', '')) * dish.quantity}`).join('')}
         \n\nNombre: ${nombre}
         \nDirección: ${direccion}
         \nTeléfono: ${telefono}
         \nMonto a pagar: $${totalAmount}`;
 
-        const url = `https://api.whatsapp.com/send?phone=573102102203&text=${encodeURIComponent(mensaje)}`;
+        const url = `https://api.whatsapp.com/send?phone=573505879754&text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
     };
     const handleCloseModal = () => {
