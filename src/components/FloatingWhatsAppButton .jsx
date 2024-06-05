@@ -6,8 +6,9 @@ const FloatingWhatsAppButton = () => {
     const [address, setAddress] = useState('');
     const [customerPhoneNumber, setCustomerPhoneNumber] = useState('');
     const [customerName, setCustomerName] = useState('');
+    const [showModal, setShowModal] = useState(false);
 
-    const restaurantPhoneNumber = '1234567890';
+    const restaurantPhoneNumber = '573102102203';
 
     const generateWhatsAppMessage = () => {
         let message = `Hola, me gustaría ordenar:\n`;
@@ -27,29 +28,48 @@ const FloatingWhatsAppButton = () => {
         window.open(whatsappUrl, '_blank');
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShowModal(false);
+        handleWhatsAppClick();
+    };
+
     return (
         <div className="fixed-bottom-center">
-            <form>
-                <input
-                    type="text"
-                    placeholder="Nombre"
-                    value={customerName}
-                    onChange={(e) => setCustomerName(e.target.value)}
-                />
-                <input
-                    type="text"
-                    placeholder="Dirección"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                />
-                <input
-                    type="text"
-                    placeholder="Teléfono"
-                    value={customerPhoneNumber}
-                    onChange={(e) => setCustomerPhoneNumber(e.target.value)}
-                />
-                <button onClick={handleWhatsAppClick}>Enviar pedido por WhatsApp</button>
-            </form>
+            <button onClick={() => setShowModal(true)}>Enviar pedido por WhatsApp</button>
+            {showModal && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <span className="close" onClick={() => setShowModal(false)}>
+                            &times;
+                        </span>
+                        <form onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                placeholder="Nombre"
+                                value={customerName}
+                                onChange={(e) => setCustomerName(e.target.value)}
+                                required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Dirección"
+                                value={address}
+                                onChange={(e) => setAddress(e.target.value)}
+                                required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Teléfono"
+                                value={customerPhoneNumber}
+                                onChange={(e) => setCustomerPhoneNumber(e.target.value)}
+                                required
+                            />
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
