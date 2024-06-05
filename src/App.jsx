@@ -8,6 +8,7 @@ import Dishes from './features/dishes/Dishes';
 import BackgroundImage from './components/BackgroundImage';
 import { useState, useEffect } from 'react'; // Importa useState y useEffect si es necesario
 import './App.css';
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton ';
 
 const App = () => {
   // Define el estado para almacenar las categorías
@@ -40,6 +41,7 @@ const App = () => {
           <Route exact path="/" element={<Categories />} />
           <Route path="/category/:categoryId" element={<Dishes />} />
         </Routes>
+        <FloatingWhatsAppButton />
       </>
     </BackgroundImage>
   );
