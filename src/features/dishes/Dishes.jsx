@@ -12,7 +12,7 @@ const Dishes = () => {
     const [customerName, setCustomerName] = useState('');
 
     // Número de celular fijo del restaurante
-    const restaurantPhoneNumber = '1234567890';
+    const restaurantPhoneNumber = '573234958021';
 
     const addToOrder = (dish) => {
         setSelectedDishes((prevSelectedDishes) => [...prevSelectedDishes, dish]);
@@ -53,28 +53,31 @@ const Dishes = () => {
                 placeholder="Nombre"
                 value={customerName}
                 onChange={(e) => setCustomerName(e.target.value)}
-                className="border border-gray-300 rounded py-2 px-4 mb-4"
+                className="border border-gray-300 rounded py-2 px-4 mb-4 w-full"
             />
             <input
                 type="text"
                 placeholder="Dirección"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="border border-gray-300 rounded py-2 px-4 mb-4"
+                className="border border-gray-300 rounded py-2 px-4 mb-4 w-full"
             />
             <input
                 type="text"
                 placeholder="Teléfono"
                 value={customerPhoneNumber}
                 onChange={(e) => setCustomerPhoneNumber(e.target.value)}
-                className="border border-gray-300 rounded py-2 px-4 mb-4"
+                className="border border-gray-300 rounded py-2 px-4 mb-4 w-full"
             />
-            <button
-                onClick={handleWhatsAppClick}
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mt-4"
-            >
-                Enviar pedido por WhatsApp
-            </button>
+            <div className="flex justify-center">
+                <button
+                    onClick={handleWhatsAppClick}
+                    className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mt-4"
+                    style={{ backgroundColor: '#25D366' }}
+                >
+                    Enviar pedido por WhatsApp
+                </button>
+            </div>
         </div>
     );
 };
