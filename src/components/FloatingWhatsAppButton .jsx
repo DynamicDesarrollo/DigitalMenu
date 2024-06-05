@@ -7,7 +7,6 @@ const FloatingWhatsAppButton = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setShowModal(false);
         handleWhatsAppClick();
     };
 
@@ -17,13 +16,22 @@ const FloatingWhatsAppButton = () => {
 
     return (
         <div className="floating-whatsapp-button">
+            <button onClick={() => setShowModal(true)} className="send-button">
+                Enviar pedido
+            </button>
+            {selectedDishes.length > 0 && (
+                <ul className="selected-dishes">
+                    {selectedDishes.map((dish, index) => (
+                        <li key={index}>{dish.name} - ${dish.price}</li>
+                    ))}
+                </ul>
+            )}
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
                         <span className="close" onClick={() => setShowModal(false)}>
                             &times;
                         </span>
-                        {/* Coloca aquí tu formulario */}
                         <form onSubmit={handleSubmit}>
                             {/* Aquí van los campos del formulario */}
                             <button type="submit" className="send-button">Enviar pedido</button>
@@ -31,14 +39,6 @@ const FloatingWhatsAppButton = () => {
                     </div>
                 </div>
             )}
-            <button onClick={() => setShowModal(true)} className="send-button">
-                Enviar pedido
-            </button>
-            <ul className="selected-dishes">
-                {selectedDishes.map((dish, index) => (
-                    <li key={index}>{dish.name} - ${dish.price}</li>
-                ))}
-            </ul>
         </div>
     );
 };
