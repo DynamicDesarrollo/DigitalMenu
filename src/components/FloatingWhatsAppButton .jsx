@@ -8,7 +8,7 @@ const FloatingWhatsAppButton = () => {
     const [customerName, setCustomerName] = useState('');
     const [showModal, setShowModal] = useState(false);
 
-    const restaurantPhoneNumber = '1234567890';
+    const restaurantPhoneNumber = '573136030702';
 
     const generateWhatsAppMessage = () => {
         let message = `Hola, me gustaría ordenar:\n`;
