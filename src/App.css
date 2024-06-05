@@ -91,7 +91,89 @@ nav a {
     flex: 1 1 calc(100% - 20px);
   }
 }
+/* src/App.css o src/components/CategoryCard.css */
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco con 80% de opacidad */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s;
+}
 
+.card:hover {
+  transform: scale(1.05);
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url("/assets/background.jpg"); /* Ruta a tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+/* Dishes.css (o tu archivo de estilos global) */
+
+.dishes-container {
+  max-height: calc(
+    100vh - 60px
+  ); /* Altura máxima para el contenedor de platos */
+  overflow-y: auto; /* Habilitar el desplazamiento vertical */
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Ancho mínimo y máximo de las tarjetas */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.dish-card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco con opacidad del 80% */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px; /* Espaciado interno */
+  margin-bottom: 20px; /* Separación adicional entre las tarjetas */
+}
+
+.dish-card h2 {
+  font-weight: bold; /* Texto en negrita */
+  color: #000; /* Color del texto negro */
+}
+.dish-card p {
+  font-weight: bold; /* Texto en negrita */
+  color: #000; /* Color del texto negro */
+}
 /* Estilos para el botón y el formulario */
 .fixed-bottom-center {
   position: fixed;
