@@ -52,6 +52,7 @@ const FloatingWhatsAppButton = () => {
                                 name="nombre"
                                 value={nombre}
                                 onChange={(e) => setNombre(e.target.value)}
+                                placeholder="Ingresa tu nombre"
                                 required
                             />
                             <label htmlFor="direccion">Dirección:</label>
@@ -61,6 +62,7 @@ const FloatingWhatsAppButton = () => {
                                 name="direccion"
                                 value={direccion}
                                 onChange={(e) => setDireccion(e.target.value)}
+                                placeholder="Ingresa tu dirección"
                                 required
                             />
                             <label htmlFor="telefono">Teléfono:</label>
@@ -70,6 +72,7 @@ const FloatingWhatsAppButton = () => {
                                 name="telefono"
                                 value={telefono}
                                 onChange={(e) => setTelefono(e.target.value)}
+                                placeholder="Ingresa tu teléfono"
                                 required
                             />
                             <label htmlFor="monto">Monto a pagar:</label>
@@ -79,6 +82,7 @@ const FloatingWhatsAppButton = () => {
                                 name="monto"
                                 value={monto}
                                 onChange={(e) => setMonto(e.target.value)}
+                                placeholder="Ingresa el monto a pagar"
                                 required
                             />
                             <button type="submit" className="send-button">Enviar pedido</button>

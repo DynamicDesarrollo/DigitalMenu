@@ -216,6 +216,31 @@ body {
 }
 
 /* Estilos para el modal */
+/* Estilos para el botón flotante centrado */
+.floating-whatsapp-button {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
+.send-button {
+  background-color: #25d366;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #128c7e;
+}
+
 /* Estilos para el modal */
 .modal {
   position: fixed;
