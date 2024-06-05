@@ -314,3 +314,15 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
+
+.selected-dishes {
+  position: fixed;
+  bottom: 60px; /* Ajusta la posición según el tamaño del botón "Enviar Pedido" */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fefefe;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
