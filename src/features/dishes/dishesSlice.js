@@ -144,13 +144,21 @@ const initialState = {
             },
         ],
     },
+    selectedDishes: [],
 };
 
 const dishesSlice = createSlice({
     name: 'dishes',
     initialState,
-    reducers: {},
+    reducers: {
+        addDishToOrder(state, action) {
+            state.selectedDishes.push(action.payload);
+        },
+    },
 });
 
+export const { addDishToOrder } = dishesSlice.actions;
+
 export const selectDishesByCategory = (state, categoryId) => state.dishes.dishes[categoryId];
-export default dishesSlice.reducer;
+
+export default dishesSlice.reducer; 
