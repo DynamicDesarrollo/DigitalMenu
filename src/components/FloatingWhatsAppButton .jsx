@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { selectSelectedDishes, selectTotalAmount } from './dishesSlice';
+import { selectSelectedDishes, selectTotalAmount } from '../features/dishes/dishesSlice';
 
 const FloatingWhatsAppButton = () => {
     const selectedDishes = useSelector(selectSelectedDishes);
