@@ -8,12 +8,12 @@ const FloatingWhatsAppButton = () => {
     const [customerName, setCustomerName] = useState('');
     const [showModal, setShowModal] = useState(false);
 
-    const restaurantPhoneNumber = '573136030702';
+    const restaurantPhoneNumber = '573102102203';
 
     const generateWhatsAppMessage = () => {
         let message = `Hola, me gustaría ordenar:\n`;
-        selectedDishes.forEach((dish, index) => {
-            message += `${index + 1}. ${dish.name} - $${dish.price}\n`;
+        selectedDishes.forEach((dish) => {
+            message += `-${dish.name} - $${dish.price}\n`;
         });
         message += `\nNombre: ${customerName}\n`;
         message += `Dirección: ${address}\n`;
@@ -36,7 +36,6 @@ const FloatingWhatsAppButton = () => {
 
     return (
         <div className="floating-whatsapp-button">
-            <button onClick={() => setShowModal(true)}>Enviar pedido por WhatsApp</button>
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
@@ -65,11 +64,19 @@ const FloatingWhatsAppButton = () => {
                                 onChange={(e) => setCustomerPhoneNumber(e.target.value)}
                                 required
                             />
-                            <button type="submit">Enviar</button>
+                            <button type="submit">Enviar pedido por WhatsApp</button>
                         </form>
                     </div>
                 </div>
             )}
+            <button onClick={() => setShowModal(true)} className="whatsapp-button">
+                <img src="/whatsapp-icon.png" alt="WhatsApp" />
+            </button>
+            <ul className="selected-dishes">
+                {selectedDishes.map((dish, index) => (
+                    <li key={index}>{dish.name} - ${dish.price}</li>
+                ))}
+            </ul>
         </div>
     );
 };
