@@ -1,43 +1,46 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { selectSelectedDishes, selectTotalAmount } from '../features/dishes/dishesSlice';
 
 const FloatingWhatsAppButton = () => {
-    const selectedDishes = useSelector(selectSelectedDishes);
-    const totalAmount = useSelector(selectTotalAmount);
+    const selectedDishes = useSelector((state) => state.dishes.selectedDishes);
     const [showModal, setShowModal] = useState(false);
     const [nombre, setNombre] = useState('');
     const [direccion, setDireccion] = useState('');
     const [telefono, setTelefono] = useState('');
+    const [monto, setMonto] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         handleWhatsAppClick();
+        setShowModal(false); // Cierra el modal cuando se envía el pedido
     };
 
     const handleWhatsAppClick = () => {
         const mensaje = `Pedido:
-        ${selectedDishes.map(dish => `\n- ${dish.name} (x${dish.quantity}) - $${Number(dish.price.replace('.', '')) * dish.quantity}`).join('')}
+        ${selectedDishes.map(dish => `\n- ${dish.name} - $${dish.price}`).join('')}
         \n\nNombre: ${nombre}
         \nDirección: ${direccion}
         \nTeléfono: ${telefono}
-        \nMonto a pagar: $${totalAmount}`;
+        \nMonto a pagar: $${monto}`;
 
         const url = `https://api.whatsapp.com/send?phone=573102102203&text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
     };
 
+    const handleCloseModal = () => {
+        setShowModal(false); // Cierra el modal cuando se hace clic en el botón de cerrar
+    };
+
     return (
-        <>
-            <div className="floating-whatsapp-button">
-                <button onClick={() => setShowModal(true)} className="send-button">
-                    Enviar pedido
-                </button>
-            </div>
+        <div className="floating-whatsapp-button">
+            <button onClick={() => setShowModal(true)} className="send-button">
+                Deseo ordenar el siguiente pedido
+            </button>
             {showModal && (
                 <div className="modal">
+                    <h1>Datos del Cliente</h1>
                     <div className="modal-content">
-                        <span className="close" onClick={() => setShowModal(false)}>
+                        <span className="close" onClick={handleCloseModal}>
                             &times;
                         </span>
                         <form onSubmit={handleSubmit}>
@@ -76,8 +79,9 @@ const FloatingWhatsAppButton = () => {
                                 type="number"
                                 id="monto"
                                 name="monto"
-                                value={totalAmount}
-                                readOnly
+                                value={monto}
+                                onChange={(e) => setMonto(e.target.value)}
+                                placeholder="Ingresa el monto a pagar"
                                 required
                             />
                             <button type="submit" className="send-button">Enviar pedido</button>
@@ -85,7 +89,7 @@ const FloatingWhatsAppButton = () => {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 };
 
