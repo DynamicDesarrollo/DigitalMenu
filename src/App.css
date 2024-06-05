@@ -211,11 +211,6 @@ body {
   transition: background-color 0.3s;
 }
 
-.fixed-bottom-center button:hover {
-  background-color: #128c7e; /* Cambia el color al pasar el ratón */
-}
-
-/* Estilos para el modal */
 /* Estilos para el botón flotante centrado */
 .floating-whatsapp-button {
   position: fixed;
@@ -239,36 +234,6 @@ body {
 
 .send-button:hover {
   background-color: #128c7e;
-}
-
-/* Estilos para la lista de pedidos */
-.selected-dishes {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #fefefe;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  max-width: 300px; /* Ancho máximo para la lista de pedidos */
-}
-
-.selected-dishes h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.selected-dishes ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.selected-dishes li {
-  margin-bottom: 5px;
-  font-size: 1em;
 }
 
 /* Estilos para el modal */

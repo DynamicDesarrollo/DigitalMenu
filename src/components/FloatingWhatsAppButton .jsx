@@ -15,14 +15,14 @@ const FloatingWhatsAppButton = () => {
     };
 
     const handleWhatsAppClick = () => {
-        const mensaje = `Quiero ordenar el Pedido:
+        const mensaje = `Pedido:
         ${selectedDishes.map(dish => `\n- ${dish.name} - $${dish.price}`).join('')}
         \n\nNombre: ${nombre}
         \nDirección: ${direccion}
         \nTeléfono: ${telefono}
         \nMonto a pagar: $${monto}`;
 
-        const url = `https://api.whatsapp.com/send?phone=573102102203&text=${encodeURIComponent(mensaje)}`;
+        const url = `https://api.whatsapp.com/send?phone=3102102203&text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
     };
 
@@ -31,16 +31,6 @@ const FloatingWhatsAppButton = () => {
             <button onClick={() => setShowModal(true)} className="send-button">
                 Enviar pedido
             </button>
-            {selectedDishes.length > 0 && (
-                <div className="selected-dishes">
-                    <h3>Pedido Actual:</h3>
-                    <ul>
-                        {selectedDishes.map((dish, index) => (
-                            <li key={index}>{dish.name} - ${dish.price}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
