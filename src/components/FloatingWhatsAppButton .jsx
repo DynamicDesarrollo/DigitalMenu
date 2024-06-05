@@ -33,7 +33,10 @@ const FloatingWhatsAppButton = () => {
                             &times;
                         </span>
                         <form onSubmit={handleSubmit}>
-                            {/* Aquí van los campos del formulario */}
+                            <label htmlFor="direccion">Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required />
+                            <label htmlFor="monto">Monto a pagar:</label>
+                            <input type="number" id="monto" name="monto" required />
                             <button type="submit" className="send-button">Enviar pedido</button>
                         </form>
                     </div>
@@ -41,6 +44,7 @@ const FloatingWhatsAppButton = () => {
             )}
         </div>
     );
+
 };
 
 export default FloatingWhatsAppButton;
