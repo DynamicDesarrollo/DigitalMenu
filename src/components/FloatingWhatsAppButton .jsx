@@ -15,7 +15,7 @@ const FloatingWhatsAppButton = () => {
     };
 
     const handleWhatsAppClick = () => {
-        const mensaje = `Pedido:
+        const mensaje = `Quiero ordenar el Pedido:
         ${selectedDishes.map(dish => `\n- ${dish.name} - $${dish.price}`).join('')}
         \n\nNombre: ${nombre}
         \nDirección: ${direccion}
@@ -32,11 +32,14 @@ const FloatingWhatsAppButton = () => {
                 Enviar pedido
             </button>
             {selectedDishes.length > 0 && (
-                <ul className="selected-dishes">
-                    {selectedDishes.map((dish, index) => (
-                        <li key={index}>{dish.name} - ${dish.price}</li>
-                    ))}
-                </ul>
+                <div className="selected-dishes">
+                    <h3>Pedido Actual:</h3>
+                    <ul>
+                        {selectedDishes.map((dish, index) => (
+                            <li key={index}>{dish.name} - ${dish.price}</li>
+                        ))}
+                    </ul>
+                </div>
             )}
             {showModal && (
                 <div className="modal">
