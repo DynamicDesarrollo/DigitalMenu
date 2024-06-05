@@ -7,26 +7,32 @@ const Dishes = () => {
     const { categoryId } = useParams();
     const dishes = useSelector((state) => selectDishesByCategory(state, parseInt(categoryId)));
     const [selectedDishes, setSelectedDishes] = useState([]);
+    const [address, setAddress] = useState('');
+    const [customerPhoneNumber, setCustomerPhoneNumber] = useState('');
+    const [customerName, setCustomerName] = useState('');
 
-    // Número de celular fijo
-    const phoneNumber = '573102102203';
+    // Número de celular fijo del restaurante
+    const restaurantPhoneNumber = '1234567890';
 
     const addToOrder = (dish) => {
         setSelectedDishes((prevSelectedDishes) => [...prevSelectedDishes, dish]);
     };
 
     const generateWhatsAppMessage = () => {
-        let message = 'Hola, me gustaría ordenar:\n';
+        let message = `Hola, me gustaría ordenar:\n`;
         selectedDishes.forEach((dish, index) => {
             message += `${index + 1}. ${dish.name} - $${dish.price}\n`;
         });
+        message += `\nNombre: ${customerName}\n`;
+        message += `Dirección: ${address}\n`;
+        message += `Teléfono: ${customerPhoneNumber}\n`;
         return message;
     };
 
     const handleWhatsAppClick = () => {
         const message = generateWhatsAppMessage();
         const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        const whatsappUrl = `https://wa.me/${restaurantPhoneNumber}?text=${encodedMessage}`;
         window.open(whatsappUrl, '_blank');
     };
 
@@ -42,6 +48,27 @@ const Dishes = () => {
                     </div>
                 ))}
             </div>
+            <input
+                type="text"
+                placeholder="Nombre"
+                value={customerName}
+                onChange={(e) => setCustomerName(e.target.value)}
+                className="border border-gray-300 rounded py-2 px-4 mb-4"
+            />
+            <input
+                type="text"
+                placeholder="Dirección"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                className="border border-gray-300 rounded py-2 px-4 mb-4"
+            />
+            <input
+                type="text"
+                placeholder="Teléfono"
+                value={customerPhoneNumber}
+                onChange={(e) => setCustomerPhoneNumber(e.target.value)}
+                className="border border-gray-300 rounded py-2 px-4 mb-4"
+            />
             <button
                 onClick={handleWhatsAppClick}
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mt-4"
