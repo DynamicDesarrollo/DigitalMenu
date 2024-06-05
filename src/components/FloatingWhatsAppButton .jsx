@@ -4,6 +4,10 @@ import { useSelector } from 'react-redux';
 const FloatingWhatsAppButton = () => {
     const selectedDishes = useSelector((state) => state.dishes.selectedDishes);
     const [showModal, setShowModal] = useState(false);
+    const [nombre, setNombre] = useState('');
+    const [direccion, setDireccion] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [monto, setMonto] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -11,7 +15,15 @@ const FloatingWhatsAppButton = () => {
     };
 
     const handleWhatsAppClick = () => {
-        // Implementa el manejo de la acción de enviar por WhatsApp aquí
+        const mensaje = `Pedido:
+        ${selectedDishes.map(dish => `\n- ${dish.name} - $${dish.price}`).join('')}
+        \n\nNombre: ${nombre}
+        \nDirección: ${direccion}
+        \nTeléfono: ${telefono}
+        \nMonto a pagar: $${monto}`;
+
+        const url = `https://api.whatsapp.com/send?phone=573102102203&text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
     };
 
     return (
@@ -33,10 +45,42 @@ const FloatingWhatsAppButton = () => {
                             &times;
                         </span>
                         <form onSubmit={handleSubmit}>
+                            <label htmlFor="nombre">Nombre:</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                value={nombre}
+                                onChange={(e) => setNombre(e.target.value)}
+                                required
+                            />
                             <label htmlFor="direccion">Dirección:</label>
-                            <input type="text" id="direccion" name="direccion" required />
+                            <input
+                                type="text"
+                                id="direccion"
+                                name="direccion"
+                                value={direccion}
+                                onChange={(e) => setDireccion(e.target.value)}
+                                required
+                            />
+                            <label htmlFor="telefono">Teléfono:</label>
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                value={telefono}
+                                onChange={(e) => setTelefono(e.target.value)}
+                                required
+                            />
                             <label htmlFor="monto">Monto a pagar:</label>
-                            <input type="number" id="monto" name="monto" required />
+                            <input
+                                type="number"
+                                id="monto"
+                                name="monto"
+                                value={monto}
+                                onChange={(e) => setMonto(e.target.value)}
+                                required
+                            />
                             <button type="submit" className="send-button">Enviar pedido</button>
                         </form>
                     </div>
@@ -44,7 +88,6 @@ const FloatingWhatsAppButton = () => {
             )}
         </div>
     );
-
 };
 
 export default FloatingWhatsAppButton;

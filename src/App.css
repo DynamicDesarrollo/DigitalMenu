@@ -215,6 +215,8 @@ body {
   background-color: #128c7e; /* Cambia el color al pasar el ratón */
 }
 
+/* Estilos para el modal */
+/* Estilos para el modal */
 .modal {
   position: fixed;
   top: 50%;
@@ -233,10 +235,11 @@ body {
   background-color: #fefefe;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   max-height: 80vh;
   overflow-y: auto;
+  border-radius: 8px;
 }
 
 .close {
@@ -244,37 +247,44 @@ body {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
   color: #000;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.send-button {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.send-button {
+  width: 100%;
+  padding: 10px;
   background-color: #25d366;
   border: none;
-  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  transition: background-color 0.3s;
 }
 
-.selected-dishes {
-  position: fixed;
-  bottom: 60px; /* Ajusta la posición según el tamaño del botón "Enviar Pedido" */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fefefe;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+button.send-button:hover {
+  background-color: #128c7e;
 }
