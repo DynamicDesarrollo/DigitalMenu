@@ -176,3 +176,44 @@ body {
   font-weight: bold; /* Texto en negrita */
   color: #000; /* Color del texto negro */
 }
+
+/* Estilos para el botón y el formulario */
+.fixed-bottom-center {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fixed-bottom-center form {
+  width: 100%;
+  max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+.fixed-bottom-center input {
+  width: calc(100% - 20px); /* Ajusta el ancho del input restando el padding */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.fixed-bottom-center button {
+  width: calc(100% - 20px); /* Ajusta el ancho del botón restando el padding */
+  padding: 10px;
+  background-color: #25d366;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fixed-bottom-center button:hover {
+  background-color: #128c7e; /* Cambia el color al pasar el ratón */
+}
