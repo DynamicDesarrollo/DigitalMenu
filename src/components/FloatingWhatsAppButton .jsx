@@ -27,10 +27,12 @@ const FloatingWhatsAppButton = () => {
     };
 
     return (
-        <div className="floating-whatsapp-button">
-            <button onClick={() => setShowModal(true)} className="send-button">
-                Enviar pedido
-            </button>
+        <>
+            <div className="floating-whatsapp-button">
+                <button onClick={() => setShowModal(true)} className="send-button">
+                    Enviar pedido
+                </button>
+            </div>
             {showModal && (
                 <div className="modal">
                     <div className="modal-content">
@@ -83,7 +85,7 @@ const FloatingWhatsAppButton = () => {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     );
 };
 

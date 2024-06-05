@@ -238,45 +238,51 @@ body {
 }
 
 /* Estilos para el modal */
+/* Estilos para el modal */
 .modal {
   position: fixed;
-  top: 50%; /* Centra verticalmente */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px; /* Ajusta el ancho máximo según sea necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%; /* Modifica el ancho del modal según sea necesario */
-  max-width: 400px; /* Limita el ancho máximo del modal para evitar que se vea demasiado ancho en pantallas grandes */
-  padding: 5px;
 }
 
 .modal-content {
   background-color: #fefefe;
-  padding: 20px; /* Ajusta el padding según sea necesario */
-  border: 1px solid #888;
-  width: 100%; /* Hace que el contenido del modal ocupe todo el ancho disponible */
+  padding: 20px;
   border-radius: 8px;
-  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total del contenido */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los elementos del formulario */
 }
 
 .modal-content label {
   display: block;
-  margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+  margin-bottom: 5px;
 }
 
 .modal-content input {
-  width: calc(
-    100% - 20px
-  ); /* Toma el 100% del ancho menos el padding para evitar que se desborde */
-  padding: 5px;
+  width: 100%; /* Ancho del input al 100% del contenedor del formulario */
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+  box-sizing: border-box;
 }
 
 .modal-content button {
-  width: 100%;
-  padding: 5px;
+  width: 100%; /* Ancho del botón al 100% del contenedor del formulario */
+  padding: 10px;
   background-color: #25d366;
   border: none;
   color: white;
@@ -284,6 +290,16 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
-  margin-bottom: 5px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.modal-content button:hover {
+  background-color: #128c7e;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
