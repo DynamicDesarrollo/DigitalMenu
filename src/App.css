@@ -219,7 +219,9 @@ body {
 }
 
 .modal {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -232,10 +234,10 @@ body {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  max-width: 400px; /* Limita el ancho del modal */
 }
 
 .close {
