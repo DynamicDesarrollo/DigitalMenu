@@ -212,6 +212,7 @@ body {
 }
 
 /* Estilos para el botón flotante centrado */
+/* Estilos para el botón flotante centrado */
 .floating-whatsapp-button {
   position: fixed;
   bottom: 50%;
@@ -291,6 +292,10 @@ input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: calc(
+    100% - 20px
+  ); /* Asegura que el input ocupe el ancho del contenedor */
+  box-sizing: border-box;
 }
 
 button.send-button {
