@@ -145,6 +145,7 @@ const initialState = {
         ],
     },
     selectedDishes: [],
+    totalAmount: 0
 };
 
 const dishesSlice = createSlice({
@@ -152,13 +153,32 @@ const dishesSlice = createSlice({
     initialState,
     reducers: {
         addDishToOrder(state, action) {
-            state.selectedDishes.push(action.payload);
+            const existingDish = state.selectedDishes.find(dish => dish.id === action.payload.id);
+            if (existingDish) {
+                existingDish.quantity += 1;
+            } else {
+                state.selectedDishes.push({ ...action.payload, quantity: 1 });
+            }
+            state.totalAmount += Number(action.payload.price.replace('.', ''));
         },
-    },
+        removeDishFromOrder(state, action) {
+            const existingDish = state.selectedDishes.find(dish => dish.id === action.payload.id);
+            if (existingDish) {
+                if (existingDish.quantity === 1) {
+                    state.selectedDishes = state.selectedDishes.filter(dish => dish.id !== action.payload.id);
+                } else {
+                    existingDish.quantity -= 1;
+                }
+                state.totalAmount -= Number(action.payload.price.replace('.', ''));
+            }
+        }
+    }
 });
 
-export const { addDishToOrder } = dishesSlice.actions;
+export const { addDishToOrder, removeDishFromOrder } = dishesSlice.actions;
 
 export const selectDishesByCategory = (state, categoryId) => state.dishes.dishes[categoryId];
+export const selectSelectedDishes = state => state.dishes.selectedDishes;
+export const selectTotalAmount = state => state.dishes.totalAmount;
 
-export default dishesSlice.reducer; 
+export default dishesSlice.reducer;
