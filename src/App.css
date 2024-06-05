@@ -218,6 +218,12 @@ body {
   background-color: #128c7e; /* Cambia el color al pasar el ratón */
 }
 
+.floating-whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 .modal {
   display: flex;
   justify-content: center;
